@@ -1,0 +1,53 @@
+@use 'lib/colors';
+
+.features-page {
+  padding: 1rem;
+}
+
+.feature {
+  display: flex;
+  height: 400px;
+  margin-bottom: 1rem;
+  gap: 1rem;
+
+  &:nth-child(odd) {
+    flex-direction: row;
+  }
+
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}
+
+@mixin card {
+  position: relative;
+  bottom: 0;
+  background-color: colors.get(white);
+
+  box-shadow: 0 -2px 1px -1px colors.get(dark, 0.2),
+    0 2px 3px 1px colors.get(dark, 0.2);
+}
+
+.feature__img {
+  @include card;
+  display: block;
+  max-height: 100%;
+}
+
+.feature__description {
+  @include card;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  font-size: 1.25rem;
+  text-align: justify;
+}
+
+.feature__heading {
+  margin-bottom: 1rem;
+  text-align: center;
+  color: colors.get(red);
+}

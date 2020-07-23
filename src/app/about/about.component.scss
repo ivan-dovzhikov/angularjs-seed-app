@@ -1,0 +1,25 @@
+@use 'lib/colors';
+
+.about-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 50%;
+  margin: 0 auto;
+
+  font-size: 2rem;
+  text-align: center;
+}
+
+.about-page__angularjs-sign {
+  font-size: 4rem;
+  color: colors.get(blue);
+  line-height: 1;
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+  }
+}

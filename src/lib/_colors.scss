@@ -1,0 +1,13 @@
+$colors: (
+  red: #dd0031,
+  blue: #1976d2,
+  dark: #333333,
+  white: #ffffff,
+  light: #f1f1f1,
+  silver: #eeeeee,
+);
+
+@function get($key, $opacity: 1) {
+  $color: map-get($colors, $key);
+  @return rgba($color, $opacity);
+}

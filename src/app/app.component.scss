@@ -1,0 +1,11 @@
+@use 'lib/colors';
+
+.view {
+  display: flex;
+  justify-content: space-evenly;
+  flex: 1;
+  width: 1000px;
+  margin: 0 auto;
+  background-color: colors.get(silver);
+  box-shadow: 0 0 4px 1px colors.get(dark, 0.4);
+}

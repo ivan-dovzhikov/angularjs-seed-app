@@ -1,0 +1,38 @@
+@use 'lib/colors';
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: colors.get(blue);
+  color: colors.get(white);
+}
+
+.header__logo {
+  display: flex;
+}
+
+.header__nav-list {
+  display: flex;
+  font-size: 1.25rem;
+  list-style: none;
+}
+
+.header__nav-item:not(:last-child) {
+  padding-right: 1rem;
+}
+
+.header__nav-link {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: colors.get(blue);
+    background-color: colors.get(white);
+  }
+}

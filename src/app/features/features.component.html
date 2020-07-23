@@ -1,0 +1,13 @@
+<div class="features-page" {{$parent.class +=" features-page" }}>
+  <section class="feature" ng-repeat="feature in features">
+    <img
+      class="feature__img"
+      ng-src="{{ feature.img }}"
+      alt="{{ feature.name }}"
+    />
+    <div class="feature__description">
+      <h3 class="feature__heading">{{ feature.name }}</h3>
+      <p>{{ feature.description }}</p>
+    </div>
+  </section>
+</div>
