@@ -13,8 +13,12 @@ a {
 
   &:hover,
   &:focus {
-    color: #1976d2;
+    color: colors.get(blue);
   }
+}
+
+body {
+  overflow: overlay;
 }
 
 html,
@@ -32,19 +36,15 @@ body,
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
     Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   font-size: 14px;
-  color: #333;
+  color: colors.get(dark);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
-  background-color: #333333;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-  border-left: 2px solid rgba(0, 0, 0, 0);
-  border-right: 2px solid rgba(0, 0, 0, 0);
-  background-clip: padding-box;
-  background-color: #eeeeee;
+  background-color: colors.get(dark, 0.8);
 }
